@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- CDN example (jsDelivr) -->
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+<script>dayjs.locale('pt-br')</script>    
+</head>
+<body>
+    <h1>Atividades</h1>
+    <form id="formAtividade" onsubmit="salvarAtividade(event)">
+        <label for="atividade">Nome da Atividade:</label>
+        <input type="text" id="atividade" name="atividade" required><br><br>
+    
+        <label for="dataInicio">Data de Início:</label>
+        <input type="datetime-local" id="dataInicio" name="dataInicio" required><br><br>
+    
+        <label for="dataFim">Data de Término:</label>
+        <input type="datetime-local" id="dataFim" name="dataFim" required><br><br>
+    
+        <button type="submit">Adicionar Atividade</button>
+    </form>
+    
+    <section>
+        
+    </section>
+
+   
+    <script src="src/js/scripts.js"></script>
+</body>
+</html>
