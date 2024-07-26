@@ -53,11 +53,13 @@ criarItemDeAtividade = (atividade) => {
     const formatarFim = formatador(atividade.dataFim);
 
     return `<div class="atividade">
+            <div class="separate">
                 ${input}
                 <span>${atividade.nome}</span>
+                </div>
                 <time>
-                    Início: ${formatarInicio.dia.semana.longo}, dia ${formatarInicio.dia.numerico} de ${formatarInicio.mes} às ${formatarInicio.hora}h<br>
-                    Término: ${formatarFim.dia.semana.longo}, dia ${formatarFim.dia.numerico} de ${formatarFim.mes} às ${formatarFim.hora}h
+                     ${formatarInicio.dia.semana.longo}, dia ${formatarInicio.dia.numerico} de ${formatarInicio.mes} às ${formatarInicio.hora}h<br>
+                    
                 </time>
             </div>`;
 };
