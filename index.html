@@ -9,26 +9,100 @@
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
 <script>dayjs.locale('pt-br')</script>    
+
+        <style>
+
+            body {
+                background-color: rgb(22, 22, 21);
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                margin-left: 200px;
+                margin-top: 50px;
+            }
+
+            .parte1 {
+                background-color: rgb(22, 22, 21);
+                align-items: start; 
+                margin-right: 50px;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+            }
+
+            .parte1 input {
+                border: 2px, solid, rgb(97, 97, 97);
+                padding: 10px;
+                background-color: rgb(7, 7, 7);
+                color: white;
+                margin-bottom: -20px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                border-radius: 8px;
+                
+            }
+
+            input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+                cursor: pointer;
+                filter: invert(0.8) brightness(100%) sepia(100%) saturate(10000%) hue-rotate(20deg);
+                }
+
+            button{
+                color: black;
+                background-color: #BEF264;
+                width: 225px;
+                border-radius: 5px;
+                padding: 8px;
+                justify-content: center;
+                font-weight: bold;
+            }    
+
+            .fulano {
+                display: flex;
+                flex-direction: column;
+                margin-top: -20px;
+                margin-left: 20px;
+                width: 640px;
+                
+
+            }
+
+        </style>
+
+
 </head>
 <body>
-    <h1>Atividades</h1>
+
+    <div class="parte1">  
     <form id="formAtividade" onsubmit="salvarAtividade(event)">
-        <label for="atividade">Nome da Atividade:</label>
-        <input type="text" id="atividade" name="atividade" required><br><br>
-    
-        <label for="dataInicio">Data de Início:</label>
-        <input type="datetime-local" id="dataInicio" name="dataInicio" required><br><br>
-    
-        <label for="dataFim">Data de Término:</label>
-        <input type="datetime-local" id="dataFim" name="dataFim" required><br><br>
-    
+
+            <label for="localidade"></label>
+            <input type="localização" id="loocate" name="localização" placeholder="Santa Rosa, Brasil" ><br><br>
+
+            <label for="atividade"></label>
+            <input type="text" id="atividade" name="atividade" placeholder="Nome da Atividade" required><br><br>
+               
+            <label for="dataInicio"></label>
+            <input type="datetime-local" id="dataInicio" name="dataInicio" required><br><br>
+               
+            <label for="dataFim"></label>
+            <input type="datetime-local" id="dataFim" name="dataFim" required><br><br>
+                
         <button type="submit">Adicionar Atividade</button>
     </form>
-    
-    <section>
-        
-    </section>
 
+        </div> 
+    
+
+    <div class="fulano"> 
+
+        <h1>Atividades</h1>  
+        <section>
+            
+        </section>
+        </div>   
    
     <script src="src/js/scripts.js"></script>
 </body>
