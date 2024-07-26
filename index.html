@@ -17,31 +17,37 @@
                 color: white;
                 display: flex;
                 flex-direction: row;
-                justify-content: start;
-                margin-left: 200px;
+                justify-content: center;
+                
                 margin-top: 50px;
             }
 
-            .parte1 {
-                background-color: rgb(22, 22, 21);
-                align-items: start; 
-                margin-right: 50px;
-                justify-content: center;
-                align-items: center;
-                width: 200px;
-            }
+            
 
             .parte1 input {
                 border: 2px, solid, rgb(97, 97, 97);
-                padding: 10px;
+                padding: 15px;
                 background-color: rgb(7, 7, 7);
                 color: white;
-                margin-bottom: -20px;
+                margin-bottom: -30px;
                 display: flex;
                 align-items: center;
                 width: 100%;
                 border-radius: 8px;
                 
+            }
+
+            .parte1 h2 {
+                border: 2px, solid, rgb(97, 97, 97);
+                padding: 15px;
+                background-color: rgb(56, 55, 55);
+                color: white;
+                margin-bottom: 40px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                border-radius: 8px;
+                font-size: 16px;
             }
 
             input[type="datetime-local"]::-webkit-calendar-picker-indicator {
@@ -52,9 +58,9 @@
             button{
                 color: black;
                 background-color: #BEF264;
-                width: 225px;
+                width: 235px;
                 border-radius: 5px;
-                padding: 8px;
+                padding: 10px;
                 justify-content: center;
                 font-weight: bold;
             }    
@@ -75,45 +81,63 @@
             }
 
             section .atividade {
-                border: 2px, solid, rgb(97, 97, 97);
+                border: 2px, solid, rgb(78, 74, 74);
                 padding: 10px;
-                background-color: rgb(7, 7, 7);
+                background-color: rgb(63, 62, 62);
                 color: white;
                 margin-bottom: -10px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 8px;
+                height: 18px;
             }
 
-            input, select {
-            all: unset;
+            
+            input[type="checkbox"] {
+                appearance: none;                /*Tirar o quadrado padrão do Input checkbox*/
+                background: url(/src/css/circle-dashed.svg) no-repeat;
+                width: 20px;
+                height: 20px;
+            }
+            
+            input[type="checkbox"]:checked {
+                background: url(/src/css/circle-check.svg) no-repeat;
+            }
+
+            section .separate {
+                display: flex;
+                align-items: center;
+            }
+
+            section span {
+                margin-left: 7px;
             }
 
 
-            @media (max-width: 1440px) {
+            @media (max-width: 375px) {
 
-                body {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100vh;
-                    margin: 0;
-                    align-items: center;
-                }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
 
-                .parte1{
-                    align-items: center;
-                    margin: 0;
-                    margin-bottom: 20px;
+        .parte1{
+            align-items: center;
+            margin: 0;
+            margin-bottom: 20px;
+        }
 
-                }
+        .fulano {
+            width: unset;
+            margin-left: unset;
+            align-items: center;
+        }
 
-                .fulano {
-                    width: 100%;
-                    align-items: center;
-                }
-
-            }
+        }
+           
 
         </style>
 
@@ -124,8 +148,7 @@
     <div class="parte1">  
     <form id="formAtividade" onsubmit="salvarAtividade(event)">
 
-            <label for="localidade"></label>
-            <input type="localização" id="loocate" name="localização" placeholder="Santa Rosa, Brasil" ><br><br>
+            <h2>Santa Rosa, Brasil</h2>
 
             <label for="atividade"></label>
             <input type="text" id="atividade" name="atividade" placeholder="Nome da Atividade" required><br><br>
